@@ -10,4 +10,4 @@ class SignupView(CreateView):
     template_name='registration/signup.html'
 
 class CustomLoginView(LoginView):
-    template_name="'registration/login.html'"
+    template_name='registration/login.html'
