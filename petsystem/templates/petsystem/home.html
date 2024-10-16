@@ -1,84 +1,38 @@
-<!Doctype html>
-<html>
-    <head>
-        <title>WELCOME TO PUPPET-TECH SOLUTIONS</title>
-        <link rel="stylesheet"
-        href="styles.css">
-        <style>
-body{
- background-color:pink;
-font-family:Arial,sans-serif;
-margin: 0;
-padding: 0;
-font-style:italic;
-font-size:16px;
-letter-spacing: 0.5px;
-}
-    header {
-    background-color:pink;
-    padding: 10px 0px;
-    text-align:center;
-    font-style:oblique;
-    font-size:20px;
-    }
-    section {
-    margin-top: 20px
-    padding: 20px;
-    background-color:white;
-    text-align:center;
-    section id{ 
-    }
-    footer{
-    padding: 10px;
-    background-color:white;
-    position:relative;
-    bottom: 0;
-    width: 100%;
-    text-align:center;
+{% extends 'petsystem/base.html' %}
 
-    }
-    </style>
-    </head>
-    <body>
-    <header>
-    <h1>PUPPET-TECH SOLUTIONS</h1>
-
-    <div id="menu" align="right" >
-        <a href="/">puppet</a>|
-        <a href="/about">about</a>|
-        <a href="/connect">connect</a>|
-        <a href="/contact">contact</a>|
-        </div>
-    </header>
-    <section id="HOME">
-    <h2>WELCOME TO PUPPET-TECH SOLUTIONS</h2>
-    </section>
-    <p>your partner in innovative solutions.At puppet-tech solutions we believe in creating impactful experiences.were dedicated to providing you with the best information and support.our goal is to empower individuals through knowledge and resources and also deliver exceptional services that enhance our clients lives.</p>
-    <section id="ABOUT">
-    <h2>ABOUT US</h2>
-    <p>puppet-tech solutions is a system designed mainly to allow petowners to interact with each other through playdates,meetups and also petowners are able to interact with each other for the sake of the benefits of their pets.we are dedicated to providing the best solutions in our industry.</p>
-    </section>
-    <section id="CONNECT">
-    <h2>CONNECT</h2>
+{% block content %}
+<section id="HOME" class="text-center bg-white mt-4">
+    <h2 class="text-danger">WELCOME TO PUPPET-TECH SOLUTIONS</h2>
     <p>
-    </section>
-    <section id="CONTACT">
-    <h2>CONTACT US</h2>
-    <p>Phonenumber:0706703863 or 0752010483</p>
-    <p>Whatsapp:0752010483</p>
-    <p>Email:puppet-techsolutions@gmail.com</p>
-    <p>Facebook:@puppet-techsolutions</p>
-    </section>
+        Your partner in innovative solutions. At Puppet-Tech Solutions, we believe in 
+        creating impactful experiences. We're dedicated to providing the best information 
+        and support. Our goal is to empower individuals through knowledge and resources 
+        and deliver exceptional services that enhance our clients' lives.
+    </p>
+</section>
 
-<footer>
-    <p>Designed by margretmbithi &2024.All rights reserved</p>
-</footer>
-</body>
-</html>
+<section id="GALLERY" class="bg-light mt-4">
+    <div class="container">
+        <h2 class="text-center">Pest Gallery</h2>
+        <div class="row mt-4">
+            {% for pest in pests %}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="{{ pest.image.url }}" class="card-img-top" alt="Image of {{ pest.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ pest.name }}</h5>
+                            <p class="card-text">Location: {{ pest.location }}</p>
+                            <p class="card-text"><small class="text-muted">Uploaded at: {{ pest.uploaded_at }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-
-
-
-
-
-
+<section id="CONNECT" class="text-center mt-4">
+    <h2>CONNECT</h2>
+    <p>Join us on social media and engage with the community!</p>
+</section>
+{% endblock %}

@@ -1,64 +1,39 @@
-<!Doctype html>
-<html>
-    <head>
-        <title>contact us</title>
-        <link rel="stylesheet"
-        href="styles.css">
-        <style>
-body{
-font-family:Arial,sans-serif;
-background-color:pink;
-margins:0;
-padding: 0;
-letter-spacing:0.5px;
-font-size:20px;
-font-style:italic;
-}
-    header {
-    background-color:pink;
-    padding: 10px 0px;
-    text-allign:center;
-    font-style:oblique;
-    font-size:20px;
+{% extends 'petsystem/base.html' %}
 
-    }
-    section{
-        text-align:center;
-    margin-top: 20px
-    padding: 20px;
-    background-color:white;
-    }
-    footer{
-    text-align:center;
-    padding: 10px;
-    background-color:white;
-    position:relative;
-    bottom: 0;
-    width: 100%;
-    }
-    </style>
-    </head>
-    <body>
-        <section id="contact-intro">
-    <h1>contact us</h1>
-    <p>we would love to hear from you!whether yoy have questions,feedback,or enquiries,feel free to reach out.we are hear to assist you!</p>
-    </section >
-    <section id="contact-info">
-    <h2>contact-information</h2>
-    <p>puppet-tech solutions:<a href="mail to:puppet-techsolutions@gmail.com">puppet-techsolutions@gmail.com</a></p>
-        <p>phone:<a href="tel:0706703863">0706703863</a></p>
-        <p>01000-576:01000-576,Nairobi,Kenya</p>
+{% block content %}
+    <header class="bg-light py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Contact Us</h1>
+        </div>
+    </header>
+    
+    <section id="contact-intro" class="container my-5">
+        <h2 class="text-primary">We'd Love to Hear from You!</h2>
+        <p class="lead">
+            Whether you have questions, feedback, or inquiries, feel free to reach out. We are here to assist you!
+        </p>
     </section>
-<section id="social -media">
-    <h2>follow us</h2>
-<p>stay connected with us on social media:</p>
-<a href="#">facebook</a>
-<a href="#">Twitter</a>
-<a href="#">instagram</a>
-</section>
-<footer>
-    <p>thank you for reaching out! We look forward to connecting with you.</p>
-</footer>
-</body>
-</html>
-
+    
+    <section id="contact-info" class="container mt-5 bg-light p-4 rounded shadow-sm">
+        <h2 class="text-primary">Contact Information</h2>
+        <p>
+            <strong>Email:</strong> <a href="mailto:puppet-techsolutions@gmail.com">puppet-techsolutions@gmail.com</a>
+        </p>
+        <p>
+            <strong>Phone:</strong> <a href="tel:0706703863">0706703863</a>
+        </p>
+        <p>
+            <strong>Address:</strong> 01000-576, Nairobi, Kenya
+        </p>
+    </section>
+    
+    <section id="social-media" class="container mt-5 text-center">
+        <h2 class="text-primary">Follow Us</h2>
+        <p>Stay connected with us on social media:</p>
+        <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-outline-primary mx-2">Facebook</a>
+            <a href="#" class="btn btn-outline-primary mx-2">Twitter</a>
+            <a href="#" class="btn btn-outline-primary mx-2">Instagram</a>
+        </div>
+    </section>
+{% endblock %}
