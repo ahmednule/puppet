@@ -5,4 +5,4 @@ from django.forms import forms
 class CustomUserCreationForn(UserCreationForm):
     class Meta:
         model=User
-        fields=['Username','email','password1','password2']
+        fields=['username','email','password1','password2']
