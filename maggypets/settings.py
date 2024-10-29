@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-t5qbb!(6p$4=!qn)l@6*ma0&9s-*p(rr$w0kwxd+nhy)3q7bj4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS=['https://https-puppet.onrender.com']
 
 
 # Application definition
