@@ -13,7 +13,7 @@
 
 <section id="GALLERY" class="bg-light mt-4">
     <div class="container">
-        <h2 class="text-center">Pest Gallery</h2>
+        <h2 class="text-center">Pets Gallery</h2>
         <div class="row mt-4">
             {% for pest in pests %}
                 <div class="col-md-4 mb-3">
@@ -22,7 +22,11 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ pest.name }}</h5>
                             <p class="card-text">Location: {{ pest.location }}</p>
+                            <p class="card-text">Age: {{ pest.age }}</p>
+                            <p class="card-text">Like: {{ pest.likes }}</p>
+                            <p class="card-text">Dislikes: {{ pest.dislikes }}</p>
                             <p class="card-text"><small class="text-muted">Uploaded at: {{ pest.uploaded_at }}</small></p>
+                            <p class="card-text">Contact me: {{ pest.contact }}</p>
                         </div>
                     </div>
                 </div>

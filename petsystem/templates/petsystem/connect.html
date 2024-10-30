@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center text-danger">Pest Gallery</h1>
+        <h1 class="text-center text-danger">Pets Gallery</h1>
         <div class="row mt-4">
             {% for pest in pests %}
                 <div class="col-md-4 mb-3">
@@ -35,13 +35,13 @@
             {% empty %}
                 <div class="col-12">
                     <div class="alert alert-warning text-center">
-                        <strong>No pests uploaded yet.</strong>
+                        <strong> pests uploaded successfully.</strong>
                     </div>
                 </div>
             {% endfor %}
         </div>
         <div class="text-center">
-            <a href="{% url 'upload_pest' %}" class="btn btn-primary mt-3">Upload New Pest</a>
+            <a href="{% url 'upload_pest' %}" class="btn btn-primary mt-3">Upload New Pets</a>
         </div>
     </div>
 {% endblock %}
